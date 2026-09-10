@@ -346,7 +346,7 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
   nav { padding: 0 1.5rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 1.5rem 1.5rem 2.2rem; min-height: calc(100vh - var(--top)); justify-content: center; }
-  .hero-right { display: none; }
+  .hero-right { display: flex; padding: 2rem 1.25rem 2.5rem; } .iphone.lg { width: 280px; } .iphone.lg .iphone-screen { min-height: 540px; }
   .s { padding: 64px 1.5rem; }
   .form-r2 { grid-template-columns: 1fr; }
   footer { flex-direction: column; align-items: flex-start; }
@@ -364,6 +364,63 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
   .diff-grid { grid-template-columns: 1fr; }
   .loop-step { flex: 0 0 78vw; }
 }
+
+/* ── La Home vera dentro il telefono (2026-09-10), rifatta sulle proporzioni dello
+   screenshot dell'app (920x2000). Unita cqw: 1cqw = 1% della larghezza dello schermo,
+   cosi il disegno e identico a 320px e a 280px. Conversione: px_reali/920*100. ── */
+.iphone-screen{background:#F2EDE4;container-type:inline-size;padding:0 !important;gap:0 !important;display:block !important}
+.iphone.lg .iphone-screen,.iphone.md .iphone-screen{min-height:0 !important}
+.hm{position:relative;height:217cqw;font-family:"DM Sans",sans-serif}
+.hm-status{position:absolute;top:3cqw;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 8cqw;height:8cqw}
+.hm-time{font-weight:600;font-size:3.9cqw;color:#1A1612;letter-spacing:-.05cqw}
+.hm-sys{display:flex;align-items:center;gap:1.4cqw}
+.hm-sys i{display:block;background:#1A1612}
+.hm-sig{width:4.2cqw;height:2.8cqw;clip-path:polygon(0 70%,20% 70%,20% 100%,0 100%,0 70%,27% 70%,27% 50%,47% 50%,47% 100%,27% 100%,27% 70%,54% 70%,54% 30%,74% 30%,74% 100%,54% 100%,54% 70%,81% 70%,81% 0,100% 0,100% 100%,81% 100%)}
+.hm-wifi{width:3.8cqw;height:2.8cqw;clip-path:polygon(50% 100%,0 35%,15% 20%,50% 60%,85% 20%,100% 35%)}
+.hm-bat{width:6cqw;height:2.9cqw;border-radius:.8cqw;background:#1A1612;position:relative}
+.hm-head{position:absolute;top:15cqw;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 5.2cqw}
+.hm-eyebrow{font-size:2.5cqw;font-weight:700;letter-spacing:.55cqw;text-transform:uppercase;color:#C13B2A}
+.hm-icons{display:flex;gap:2.6cqw;align-items:center}
+.hm-circ{width:7.8cqw;height:7.8cqw;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hm-people{background:#fff;border:1px solid rgba(26,22,18,.08)}
+.hm-people svg{width:4.2cqw;height:4.2cqw}
+.hm-avatar,.hm-tab-avatar{background:#2F4A66;color:#F2EDE4;font-weight:700;font-size:3.4cqw;border:.5cqw solid #C13B2A;box-sizing:border-box}
+.hm-card{position:absolute;background:#fff;border-radius:4.4cqw;border:1px solid rgba(26,22,18,.05)}
+.hm-front{left:12.5cqw;width:75cqw;top:30cqw;height:117cqw;box-shadow:0 2cqw 5cqw rgba(26,22,18,.08);display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 5cqw}
+.hm-side{width:75cqw;top:36.5cqw;height:105cqw;background:#FCFAF6}
+.hm-left{left:6.5cqw}
+.hm-right{left:18.5cqw}
+.hm-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding-bottom:13cqw} /* spazio riservato al radicamento in fondo: nessuna promessa puo toccarlo */
+.hm-num{font-family:"Bebas Neue",Impact,sans-serif;font-size:12.5cqw;line-height:1;color:#1A1612}
+.hm-num i{color:#C13B2A;font-style:normal}
+.hm-num-lbl{font-family:Lora,Georgia,serif;font-style:italic;font-size:3.4cqw;color:#5C5248;margin-top:1.6cqw}
+.hm-vow{font-family:Lora,Georgia,serif;font-style:italic;font-size:4.2cqw;line-height:1.3;color:#1A1612;margin-top:5cqw;transition:opacity .15s}
+.hm-pen{width:2.8cqw;height:2.8cqw;vertical-align:-.3cqw;display:inline-block}
+.hm-metrics{position:absolute;left:0;right:0;bottom:4.5cqw;display:flex;flex-direction:column;align-items:center;gap:.4cqw}
+.hm-metrics b{font-weight:700;font-size:3.6cqw;color:#1A1612}
+.hm-metrics small{font-size:2.1cqw;letter-spacing:.42cqw;text-transform:uppercase;color:#9A9088}
+.hm-dots{position:absolute;top:151cqw;left:0;right:0;display:flex;justify-content:center;gap:1.4cqw}
+.hm-dots i{width:1.5cqw;height:1.5cqw;border-radius:99px;background:#D4C9B8;display:block}
+.hm-dots i.on{width:3.8cqw;background:#C13B2A}
+.hm-btn{position:absolute;left:5.5cqw;width:89cqw;text-align:center;font-weight:700;font-size:4cqw;border-radius:6.3cqw;display:flex;align-items:center;justify-content:center}
+.hm-hold{top:165cqw;height:12.5cqw;background:#C13B2A;color:#fff}
+.hm-tiny{top:180cqw;height:11cqw;background:transparent;color:#1A1612;border:.22cqw solid rgba(26,22,18,.16)}
+.hm-tabbar{position:absolute;top:195.5cqw;left:4cqw;width:92cqw;height:14cqw;border-radius:7cqw;background:rgba(74,68,62,.9);display:flex;align-items:center;justify-content:space-around;padding:0 2cqw}
+.hm-tab{width:11cqw;height:11cqw;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hm-tab svg{width:4.8cqw;height:4.8cqw}
+.hm-tab.on{background:rgba(255,255,255,.16)}
+.hm-tab-avatar{width:7.4cqw;height:7.4cqw;font-size:3.2cqw}
+
+/* La casella della frase non cambia altezza tra una promessa e l'altra: due righe sempre */
+#promise-preview{min-height:calc(2 * 1.55em + 2.4rem);display:flex;align-items:center}
+@media (max-width:640px){#promise-preview{min-height:calc(3 * 1.5em + 2.2rem)}}
+
+/* Cornice del telefono piu sottile e meno nera (richiesta Simone 2026-09-10) */
+.iphone{padding:7px !important;background:#2A2623 !important;box-shadow:0 30px 60px rgba(26,22,18,.22),0 0 0 1px rgba(255,255,255,.06) !important}
+.iphone.lg{width:306px}
+@media (max-width:960px){.iphone.lg{width:266px}}
+.iphone-island{height:22px !important;width:76px !important;top:12px !important;background:#2A2623 !important}
+.iphone-screen{border-radius:40px !important}
 </style>
 </head>
 <body>
@@ -396,11 +453,12 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
       <div class="promise-chips" id="promise-chips">
         <button class="chip active" data-goal="palestra">Palestra</button>
         <button class="chip" data-goal="fumo">Smettere di fumare</button>
+          <button class="chip" data-goal="bere">Bere meno</button>
         <button class="chip" data-goal="scrittura">Scrivere ogni giorno</button>
         <button class="chip" data-goal="studio">Studiare</button>
         <button class="chip" data-goal="sveglia">Svegliarmi presto</button>
       </div>
-      <div class="promise-preview" id="promise-preview">"Andrò in palestra alle 7:00, lunedì mercoledì venerdì, prima di andare in ufficio."</div>
+      <div class="promise-preview" id="promise-preview">“Mi alleno alle 7:00, lunedì mercoledì venerdì, prima dell’ufficio.”</div>
     </div>
 
     <div class="hero-cta">
@@ -417,26 +475,29 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
     <div class="iphone lg">
       <div class="iphone-island"><div class="iph-speaker"></div><div class="iph-cam"></div></div>
       <div class="iphone-screen">
-        <div class="iph-bar"><span class="iph-logo">VOW</span><span class="iph-time">09:41</span></div>
-        <div class="iph-label">Il tuo Vow</div>
-        <div class="iph-vow" id="phone-vow">"Andrò in palestra alle 7:00, lunedì mercoledì venerdì, prima di andare in ufficio."</div>
-        <div class="iph-label">Il tuo Witness</div>
-        <div class="iph-card">
-          <div class="iph-card-name">Marco Ferretti</div>
-          <div class="iph-card-meta">Witness dal 4 marzo · 28 giorni</div>
-          <div class="iph-card-status"><span class="iph-dot"></span><span>Sa del tuo impegno di oggi</span></div>
-        </div>
-        <div class="iph-notif">
-          <div class="iph-notif-tag">Notifica a Marco · 07:14</div>
-          <div class="iph-notif-txt" id="phone-notif">Hai mantenuto il tuo Vow oggi. Giorno 28 consecutivo.</div>
-        </div>
-        <div class="iph-grid">
-          <div class="iph-stat"><div class="iph-val">28</div><div class="iph-lbl">Giorni consecutivi</div></div>
-          <div class="iph-stat"><div class="iph-val">4</div><div class="iph-lbl">Volte che sei tornato</div></div>
-        </div>
-        <div class="iph-btnrow">
-          <div class="iph-btn hold">Hold</div>
-          <div class="iph-btn fall">Fall</div>
+        <div class="hm">
+          <div class="hm-status"><span class="hm-time">9:41</span><span class="hm-sys"><i class="hm-sig"></i><i class="hm-wifi"></i><i class="hm-bat"></i></span></div>
+          <div class="hm-head"><span class="hm-eyebrow">Oggi</span><span class="hm-icons"><span class="hm-circ hm-people"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1612" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="hm-circ hm-avatar">S</span></span></div>
+          <div class="hm-card hm-side hm-left"></div>
+          <div class="hm-card hm-side hm-right"></div>
+          <div class="hm-card hm-front">
+            <div class="hm-center">
+              <div class="hm-num"><span id="hm-voti">12</span><i>.</i></div>
+              <div class="hm-num-lbl">voti</div>
+              <div class="hm-vow"><span id="phone-vow">“Mi alleno alle 7:00, lunedì mercoledì venerdì, prima dell’ufficio.”</span>&nbsp;<svg class="hm-pen" viewBox="0 0 24 24" fill="none" stroke="#9A9088" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+            </div>
+            <div class="hm-metrics"><b id="hm-rad">34%</b><small>Radicamento</small></div>
+          </div>
+          <div class="hm-dots"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+          <div class="hm-btn hm-hold">Hold</div>
+          <div class="hm-btn hm-tiny">Tiny Hold</div>
+          <div class="hm-tabbar">
+            <span class="hm-tab on"><svg viewBox="0 0 24 24" fill="none" stroke="#F2EDE4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span>
+            <span class="hm-tab"><svg viewBox="0 0 24 24" fill="none" stroke="#D9D2C6" stroke-width="1.9" stroke-linecap="round"><path d="M6 20V10M12 20V4M18 20v-6"/></svg></span>
+            <span class="hm-tab"><svg viewBox="0 0 24 24" fill="none" stroke="#D9D2C6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
+            <span class="hm-tab"><svg viewBox="0 0 24 24" fill="none" stroke="#D9D2C6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span class="hm-tab hm-tab-avatar">S</span>
+          </div>
         </div>
       </div>
     </div>
@@ -516,7 +577,7 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
         </div>
         <div class="mech-visual">
           <div class="mv-tag">Il tuo Vow</div>
-          <div class="mv-txt" id="mech-vow">"Andrò in palestra alle 7:00, lunedì mercoledì venerdì, prima di andare in ufficio."</div>
+          <div class="mv-txt" id="mech-vow">“Mi alleno alle 7:00, lunedì mercoledì venerdì, prima dell’ufficio.”</div>
         </div>
       </div>
 
@@ -528,7 +589,7 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
         </div>
         <div class="mech-visual">
           <div class="mv-tag">Notifica a Marco · 07:14</div>
-          <div class="mv-txt plain" id="mech-notif">Hai mantenuto il tuo Vow oggi. Giorno 28 consecutivo.</div>
+          <div class="mv-txt plain" id="mech-notif">Hai tenuto oggi. Dodicesimo voto per chi vuoi diventare.</div>
         </div>
       </div>
 
@@ -651,7 +712,7 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
             </div>
             <div class="iph-notif">
               <div class="iph-notif-tag">Chat con Marco</div>
-              <div class="iph-notif-txt">🔥 · "Giorno 28. Fiero di te."</div>
+              <div class="iph-notif-txt">🔥 · "Dodici voti. Fiero di te."</div>
             </div>
           </div>
         </div>
@@ -790,6 +851,7 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
         <option value="" disabled selected>Qual è la promessa che continui a rimandare?</option>
         <option value="palestra">Andare in palestra con costanza</option>
         <option value="fumo">Smettere di fumare</option>
+          <option value="bere">Bere meno</option>
         <option value="scrittura">Scrivere ogni giorno</option>
         <option value="studio">Studiare con costanza</option>
         <option value="sveglia">Svegliarmi presto</option>
@@ -825,27 +887,19 @@ footer { background: var(--ink-mid); border-top: 1px solid rgba(255,255,255,0.05
 <script>
 // ── Promise switcher: goal → { promise, vow, notif } ──
 const GOALS = {
-  palestra: {
-    promise: '"Andrò in palestra alle 7:00, lunedì mercoledì venerdì, prima di andare in ufficio."',
-    notif: 'Hai mantenuto il tuo Vow oggi. Giorno 28 consecutivo.'
-  },
-  fumo: {
-    promise: '"Non fumerò nessuna sigaretta oggi. Se sento il bisogno, scrivo a Marco prima di cedere."',
-    notif: 'Hai mantenuto il tuo Vow oggi. Giorno 12 senza sigarette.'
-  },
-  scrittura: {
-    promise: '"Scriverò 500 parole ogni mattina alle 7:00, prima di aprire il telefono."',
-    notif: 'Hai mantenuto il tuo Vow oggi. Giorno 45 consecutivo.'
-  },
-  studio: {
-    promise: '"Studierò 90 minuti ogni sera alle 20:00, telefono in un\'altra stanza."',
-    notif: 'Hai mantenuto il tuo Vow oggi. Giorno 9 consecutivo.'
-  },
-  sveglia: {
-    promise: '"Mi alzerò alle 6:30 ogni giorno feriale, sveglia fuori dalla camera da letto."',
-    notif: 'Hai mantenuto il tuo Vow oggi. Giorno 17 consecutivo.'
-  }
+  // Regole di scrittura dell'app (lib/suggestions.ts): il gesto al presente, in prima
+  // persona, piccolo davvero; l'ancora agganciata a un gesto che esiste già; l'identità
+  // come continuazione di "Sono il tipo di persona che…". Un "smettere di" in VOW
+  // diventa il gesto che fai INVECE: è quello che l'app chiederà, meglio mostrarlo qui.
+  palestra:  { promise: '“Mi alleno alle 7:00, lunedì mercoledì venerdì, prima dell’ufficio.”', identity: 'si allena anche quando non ne ha voglia', voti: 12, notif: 'Hai tenuto oggi. Dodicesimo voto per chi vuoi diventare.' },
+  fumo:      { promise: '“Dopo il caffè bevo un bicchiere d’acqua, invece della sigaretta.”', identity: 'non ha bisogno di una sigaretta per fare una pausa', voti: 9, notif: 'Hai tenuto oggi. Nono voto per chi vuoi diventare.' },
+  bere:      { promise: '“Nelle sere in settimana, a cena, bevo acqua.”', identity: 'sta bene anche senza un bicchiere', voti: 7, notif: 'Hai tenuto oggi. Settimo voto per chi vuoi diventare.' },
+  scrittura: { promise: '“Scrivo trecento parole ogni mattina, dopo il caffè.”', identity: 'si prende cura delle sue idee', voti: 15, notif: 'Hai tenuto oggi. Quindicesimo voto per chi vuoi diventare.' },
+  studio:    { promise: '“Studio quarantacinque minuti ogni giorno, dopo pranzo.”', identity: 'porta a termine quello che inizia', voti: 11, notif: 'Hai tenuto oggi. Undicesimo voto per chi vuoi diventare.' },
+  sveglia:   { promise: '“Mi alzo alle 6:30 appena suona la sveglia, senza rimandare.”', identity: 'comincia la giornata alle sue condizioni', voti: 8, notif: 'Hai tenuto oggi. Ottavo voto per chi vuoi diventare.' }
 };
+// Radicamento come lo calcola l'app: curva di Lally (66 ripetizioni = 90%).
+function radicamento(voti) { return Math.round(100 * (1 - Math.exp(-Math.LN10 / 66 * voti))); }
 
 const chips = document.querySelectorAll('.chip');
 const promisePreview = document.getElementById('promise-preview');
@@ -854,6 +908,7 @@ const phoneNotif = document.getElementById('phone-notif');
 const mechVow = document.getElementById('mech-vow');
 const mechNotif = document.getElementById('mech-notif');
 
+document.addEventListener('DOMContentLoaded', () => setGoal('palestra'));
 function setGoal(key) {
   const g = GOALS[key];
   if (!g) return;
@@ -864,6 +919,10 @@ function setGoal(key) {
     if (phoneVow) phoneVow.textContent = g.promise;
     if (mechVow) mechVow.textContent = g.promise;
     if (phoneNotif) phoneNotif.textContent = g.notif;
+    const hmIdent = document.getElementById('hm-ident'), hmVoti = document.getElementById('hm-voti'), hmRad = document.getElementById('hm-rad');
+    if (hmIdent) hmIdent.textContent = g.identity;
+    if (hmVoti) hmVoti.textContent = g.voti;
+    if (hmRad) hmRad.textContent = radicamento(g.voti) + '%';
     if (mechNotif) mechNotif.textContent = g.notif;
     [promisePreview, phoneVow, mechVow, phoneNotif, mechNotif].forEach(el => { if (el) el.style.opacity = 1; });
   }, 150);
